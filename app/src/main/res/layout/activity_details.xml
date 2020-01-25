@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="@dimen/two_four"
+        android:layout_marginTop="@dimen/four_eight"
+        android:background="@drawable/rect"
+        android:contentDescription="@string/content"
+        android:transitionName="imageTransition" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/image_view"
+        android:layout_marginStart="@dimen/two_four"
+        android:layout_marginEnd="@dimen/two_four"
+        android:layout_toStartOf="@+id/cross"
+        android:layout_toEndOf="@id/image_view"
+        android:text="Candy \nCrust"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/image_view"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/two_four"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:tint="@android:color/black" />
+
+
+    <TextView
+        android:id="@+id/dummy_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:layout_alignStart="@id/image_view"
+        android:layout_marginTop="@dimen/two_four"
+        android:layout_marginEnd="@dimen/two_four"
+        android:maxLines="2"
+        android:text="@string/dummy_string"
+        android:textColor="@color/colorText"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/read_more_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dummy_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/two_four"
+        android:layout_marginBottom="@dimen/three_two"
+        android:maxLines="2"
+        android:text="@string/read_more"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+
+    <include
+        layout="@layout/dynamic_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
+        android:layout_below="@id/read_more_tv" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/one_six"
+        android:layout_marginTop="@dimen/two_four"
+        android:layout_marginEnd="@dimen/one_six"
+        android:layout_marginBottom="@dimen/one_six"
+        android:backgroundTint="@color/progress_color"
+        android:paddingTop="@dimen/eight"
+        android:paddingBottom="@dimen/eight"
+        android:text="Download \n30MB"
+        android:textColor="@android:color/white"
+        android:transitionName="buttonTransition"
+        android:visibility="visible"
+        app:cornerRadius="25dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/three_two"
+        android:layout_marginTop="@dimen/two_four"
+        android:layout_marginEnd="@dimen/three_two"
+        android:layout_marginBottom="@dimen/one_six"
+        android:minHeight="64dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/mf_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="@dimen/two_four"
+            android:layout_toStartOf="@id/float_btn"
+            android:max="100"
+            android:progress="20"
+            android:progressDrawable="@drawable/green_progress_drawable" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/float_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/colorYellow"
+            android:elevation="0dp"
+            android:src="@drawable/ic_close_white"
+            app:elevation="0dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/play_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/one_six"
+        android:layout_marginTop="@dimen/two_four"
+        android:layout_marginEnd="@dimen/one_six"
+        android:layout_marginBottom="@dimen/one_six"
+        android:backgroundTint="@color/blue_color"
+        android:paddingTop="@dimen/eight"
+        android:paddingBottom="@dimen/eight"
+        android:text="Play"
+        android:textColor="@android:color/white"
+        android:transitionName="buttonTransition"
+        android:visibility="gone"
+        app:cornerRadius="25dp" />
+
+</RelativeLayout>

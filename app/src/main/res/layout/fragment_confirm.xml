@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ready_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/four_eight"
+        android:gravity="center"
+        android:minWidth="150dp"
+        android:text="Ready To Play?"
+        android:textColor="@color/colorGray"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/oswald_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ready_text"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:minWidth="150dp"
+        android:text="OSWALD"
+        android:textColor="@color/colorGray"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/box_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/oswald_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/two_four"
+        android:background="@drawable/rect_gray"
+        android:gravity="center"
+        android:minWidth="150dp"
+        android:paddingStart="@dimen/three_two"
+        android:paddingTop="@dimen/eight"
+        android:paddingEnd="@dimen/three_two"
+        android:paddingBottom="@dimen/eight"
+        android:text=""
+        android:textColor="@android:color/white" />
+
+
+    <LinearLayout
+        android:id="@+id/circle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/box_one"
+        android:layout_marginTop="@dimen/two_four"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/round_one"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="@dimen/one_six"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/round_two"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="@dimen/one_six"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/round_three"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="@dimen/one_six"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/confirm_wallet_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circle_layout"
+        android:layout_alignStart="@id/confirm_button"
+        android:layout_marginTop="@dimen/four_eight"
+        android:text="Wallet Balance : "
+        android:textColor="@color/colorGray"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/confirm_wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/confirm_wallet_text"
+        android:layout_marginStart="@dimen/eight"
+        android:layout_toEndOf="@id/confirm_wallet_text"
+        android:background="@color/colorGray"
+        android:gravity="center_horizontal"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned"
+        android:minWidth="56dp"
+        android:text="10"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/confirm_wallet_text"
+        android:layout_marginStart="@dimen/one_six"
+        android:layout_marginTop="@dimen/one_six"
+        android:layout_marginEnd="@dimen/one_six"
+        android:layout_marginBottom="@dimen/one_six"
+        android:backgroundTint="@android:color/black"
+        android:paddingTop="@dimen/eight"
+        android:paddingBottom="@dimen/eight"
+        android:text="Confirm"
+        android:textColor="@android:color/white"
+        android:transitionName="buttonTransition"
+        app:cornerRadius="25dp" />
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Share Animation</string>
+    <string name="content">Content</string>
+    <string name="dummy_string">Dummy text is text that is used by Mobile Developers to occupy the space which will later be filled with real content.</string>
+    <string name="read_more">Read More</string>
+</resources>
